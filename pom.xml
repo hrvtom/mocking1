@@ -1,0 +1,93 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.song.example</groupId>
+  <artifactId>powermockito-junit</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  
+  <dependencies>
+  	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>4.11</version>
+		<scope>test</scope>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.powermock</groupId>
+		<artifactId>powermock-api-mockito</artifactId>
+		<version>1.5.5</version>
+		<scope>test</scope>
+	</dependency>
+	
+  	<dependency>
+		<groupId>org.powermock</groupId>
+		<artifactId>powermock-module-junit4</artifactId>
+		<version>1.5.5</version>
+		<exclusions>
+			<exclusion>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>org.powermock</groupId>
+    			<artifactId>powermock-core</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>org.powermock</groupId>
+    			<artifactId>powermock-reflect</artifactId>
+			</exclusion>
+		</exclusions>
+		<scope>test</scope>
+	</dependency>
+	
+  </dependencies>
+</project>
+
+<!-- 
+
+this is for TESTNG
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>6.8.8</version>
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.powermock</groupId>
+    <artifactId>powermock-api-mockito</artifactId>
+    <version>1.5.5</version>
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.powermock</groupId>
+    <artifactId>powermock-module-testng</artifactId>
+    <version>1.5.5</version>
+    <exclusions>
+        <exclusion>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+        </exclusion>
+        <exclusion>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-core</artifactId>
+        </exclusion>
+        <exclusion>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-reflect</artifactId>
+        </exclusion>
+    </exclusions>
+    <scope>test</scope>
+</dependency>
+ -->
+ 
+ <!-- 
+ In many cases, if the Maven packages are well defined, Maven can handle the transitive dependencies nicely.
+ But it is always better to make sure exactly what packages are added to the Maven classpath.
+ This is the reason why package exclusions are used in the dependency declaration of the "powermock-module-junit4" and
+ "powermock-module-testng" packages to avoid potential version inconsistencies and confusions.
+  -->
