@@ -37,7 +37,7 @@ public class MockTest {
 	}
 
 	/*
-	 * For TestNG test class needs to extend PowerMockTestCase
+	 * For TestNG test class needs to extend PowerMockTestCase This is not the case for JUnit
 	 */
 //	In the test programs, it is not uncommon that some test cases have final or static methods to mock,
 //	while the others do not. It is important that we do not extend the "PowerMockTestCase" class
